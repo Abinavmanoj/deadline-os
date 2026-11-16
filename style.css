@@ -1,0 +1,244 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #080f1c;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 420px;
+    margin: auto;
+}
+
+.lockscreen {
+    min-height: 760px;
+    padding: 25px;
+    border-radius: 30px;
+    background:
+      radial-gradient(circle at top right,
+      #17476c, transparent 45%),
+      linear-gradient(160deg, #152a40, #080e1b 75%);
+    border: 1px solid #34506a;
+    box-shadow: 0 20px 60px #0008;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.top, .progress-heading {
+    display: flex;
+    justify-content: space-between;
+    color: #a8c7e8;
+    font-size: 12px;
+}
+
+.clock {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.clock h1 {
+    font-size: 76px;
+    font-weight: 300;
+    letter-spacing: -4px;
+}
+
+.clock p, .tag {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #8bbce4;
+}
+
+.goal h2 {
+    font-size: 30px;
+    margin: 12px 0;
+    letter-spacing: 2px;
+}
+
+.goal p {
+    color: #a8c7e8;
+    font-size: 13px;
+}
+
+.countdown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7px;
+}
+
+.countdown div {
+    background: #203750;
+    border-radius: 12px;
+    text-align: center;
+    padding: 15px 3px;
+}
+
+.countdown h2 {
+    font-size: 25px;
+}
+
+.countdown span {
+    font-size: 9px;
+    color: #a8c7e8;
+}
+
+.progress {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.bar {
+    height: 8px;
+    background: #34485d;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#progressBar {
+    height: 100%;
+    width: 0%;
+    background: #52d6b1;
+    transition: width 0.5s;
+}
+
+.milestones h3 {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.milestone {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #34485d;
+    font-size: 12px;
+    gap: 10px;
+}
+
+.milestone span:last-child {
+    color: #8bbce4;
+}
+
+.quote {
+    text-align: center;
+    margin-top: auto;
+    font-size: 13px;
+    color: #a8c7e8;
+}
+
+.settings {
+    margin-top: 25px;
+    padding: 20px;
+    background: #142438;
+    border-radius: 15px;
+}
+
+.settings h2 {
+    margin-bottom: 20px;
+}
+
+.settings label {
+    display: block;
+    margin: 15px 0 8px;
+    font-size: 13px;
+}
+
+.settings input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #536b84;
+    background: #0c1928;
+    color: white;
+}
+
+.settings button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #52d6b1;
+    color: #081522;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media(max-width: 380px) {
+    .lockscreen {
+        padding: 18px;
+    }
+
+    .clock h1 {
+        font-size: 62px;
+    }
+
+    .countdown h2 {
+        font-size: 20px;
+    }
+}
+
+.milestone-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.milestone-controls input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #536b84;
+    background: #0c1928;
+    color: white;
+}
+
+.milestone-controls button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #52d6b1;
+    color: #081522;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.milestone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #34485d;
+    font-size: 12px;
+}
+
+.milestone.completed .milestone-name {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.milestone-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.milestone-actions button {
+    border: none;
+    background: transparent;
+    color: #8bbce4;
+    cursor: pointer;
+    font-size: 16px;
+}

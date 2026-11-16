@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>DEADLINE OS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <section class="lockscreen">
+
+            <div class="top">
+                <span id="today"></span>
+                <span>● ● ●</span>
+            </div>
+
+            <div class="clock">
+                <h1 id="clock">00:00</h1>
+                <p>YOUR FUTURE STARTS HERE</p>
+            </div>
+
+            <div class="goal">
+                <span class="tag">YOUR NEXT BIG MILESTONE</span>
+                <h2 id="goalTitle">AI ENGINEER</h2>
+                <p>Every second brings you closer.</p>
+            </div>
+
+            <div class="countdown">
+                <div>
+                    <h2 id="days">000</h2>
+                    <span>DAYS</span>
+                </div>
+                <div>
+                    <h2 id="hours">00</h2>
+                    <span>HOURS</span>
+                </div>
+                <div>
+                    <h2 id="minutes">00</h2>
+                    <span>MINUTES</span>
+                </div>
+                <div>
+                    <h2 id="seconds">00</h2>
+                    <span>SECONDS</span>
+                </div>
+            </div>
+
+            <div class="progress">
+                <div class="progress-heading">
+                    <span>YOUR JOURNEY</span>
+                    <span id="progressText">0%</span>
+                </div>
+                <div class="bar">
+                    <div id="progressBar"></div>
+                </div>
+            </div>
+
+            
+<div class="milestones">
+
+    <h3>UPCOMING MILESTONES</h3>
+
+    <div id="milestoneList"></div>
+
+    <div class="milestone-controls">
+
+        <input
+            type="text"
+            id="milestoneInput"
+            placeholder="Enter a new milestone..."
+        >
+
+        <button id="addMilestoneButton">
+            + Add Milestone
+        </button>
+
+    </div>
+
+</div>
+
+
+            <div class="quote">
+                "Small progress. Big future."
+            </div>
+
+        </section>
+
+        <section class="settings">
+            <h2>Personalise your countdown</h2>
+
+            <label>Goal title</label>
+            <input id="titleInput"
+                   value="AI ENGINEER">
+            <label>Start Date</label>
+            <input id="startDateInput" 
+                   type="datetime-local">
+            <label>Deadline</label>
+            <input id="dateInput"
+                   type="datetime-local">
+
+            <button id="updateButton">
+                Update My Countdown
+            </button>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
